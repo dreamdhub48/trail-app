@@ -1,0 +1,18 @@
+body {
+background: #f1f3f6;
+}
+
+
+.container {
+max-width: 800px;
+}
+
+
+.navbar-brand {
+font-weight: bold;
+}
+
+
+form label {
+font-weight: 500;
+}
