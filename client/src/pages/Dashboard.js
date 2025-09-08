@@ -7,14 +7,14 @@ export default function Dashboard() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = sessionStorage.getItem("token");
+    const token = localStorage.getItem("token");
     if (!token) {
       navigate("/login");
       return;
     }
     api.get("/auth/me", { headers: { Authorization: `Bearer ${token}` } })
       .then(res => setUser(res.data))
-      .catch(() => navigate("/login"));
+      .catch(() => navigate("/dashboard"));
   }, [navigate]);
 
   if (!user) return null;

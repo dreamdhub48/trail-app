@@ -13,7 +13,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const res = await api.post("/auth/login", form);
-      sessionStorage.setItem("token", res.data.token);
+      localStorage.setItem("token", res.data.token);
       navigate("/dashboard");
     } catch (err) {
       setErr(err.response?.data?.message || "Login failed");
