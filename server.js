@@ -19,6 +19,10 @@ mongoose
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
 
+const contactRoutes = require("./routes/contact");
+app.use("/contacts", contactRoutes);
+
+
 // server
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

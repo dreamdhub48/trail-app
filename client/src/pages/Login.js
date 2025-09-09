@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import api from "../services/api";
 import { useNavigate, Link } from "react-router-dom";
+import NavBar from "../components/NavBar";
 
 export default function Login() {
   const [form, setForm] = useState({ email:"", password:"" });
@@ -21,6 +22,8 @@ export default function Login() {
   };
 
   return (
+    <>
+    <NavBar />
     <div className="container mt-5">
       <div className="card shadow-lg p-4">
         <h2 className="mb-3 text-center">Login</h2>
@@ -43,5 +46,6 @@ export default function Login() {
         </form>
       </div>
     </div>
+    </>
   );
 }

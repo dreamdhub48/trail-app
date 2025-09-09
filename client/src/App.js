@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Forgot from "./pages/Forgot";
 import Reset from "./pages/Reset";
 import Dashboard from "./pages/Dashboard";
+import Contact from "./pages/Contact";
 
 function App() {
   const token = localStorage.getItem("token"); // check token here
@@ -30,6 +31,8 @@ function App() {
           path="/dashboard"
           element={token ? <Dashboard /> : <Navigate to="/dashboard" />}
         />
+
+        <Route path="/contacts" element={<Contact />} />
 
         {/* Fallback for unknown routes */}
         {/* <Route path="*" element={<Navigate to="/" />} /> */}
